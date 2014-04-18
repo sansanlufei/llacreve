@@ -8,6 +8,4 @@ public class DialogHelper {
 	public DialogHelper(Context context) {
 		this.mContext = context;
 	}
-
-	
 }
