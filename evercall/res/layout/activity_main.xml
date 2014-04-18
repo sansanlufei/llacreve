@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent">
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/contacts_list_item_height_small_40"
+        android:background="@color/bottom_pad_background"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/bottom_pad">
+		
+        <ImageButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_pad_button_bg"
+            android:src="@drawable/device_access_call"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/to_dial_pad"/>
+        
+        <ImageButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_pad_button_bg"
+            android:src="@drawable/social_chat"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/to_dial_pad"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/to_sms"/>
+        
+        <ImageButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_pad_button_bg"
+            android:src="@drawable/action_search"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/search_button"/>
+        
+        <ImageButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_pad_button_bg"
+            android:src="@drawable/collections_view_as_grid"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/collections_button"/>
+        
+        <ImageButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_pad_button_bg"
+            android:src="@drawable/social_add_person"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/collections_button"
+            android:layout_marginRight="10dp"
+            android:id="@+id/to_contact_add"/>
+        
+        
+    </RelativeLayout>
+    
+    <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_pad"
+            android:id="@+id/pagers">
+    </android.support.v4.view.ViewPager>
+    
+</RelativeLayout>

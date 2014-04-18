@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <dimen name="contacts_list_item_height_small_10">10dp</dimen>
+    <dimen name="contacts_list_item_height_small_30">30dp</dimen>
+    <dimen name="contacts_list_item_height_small_35">35dp</dimen>
+    <dimen name="contacts_list_item_height_small_40">40dp</dimen>
+    <dimen name="contacts_list_item_height">60dp</dimen>
+    <dimen name="contacts_list_item_height2">120dp</dimen>
+    
+    <dimen name="search_pad_text_size">20sp</dimen>
+    <dimen name="search_pad_button_width">37dp</dimen>
+    
+    <dimen name="collections_item_button_size">40dp</dimen>
+    <dimen name="collections_item_height1">50dp</dimen>
+    <dimen name="collections_item_height2">100dp</dimen>
+    <dimen name="collections_item_height3">150dp</dimen>
+    <dimen name="collections_item_height4">200dp</dimen>
+    
+    <dimen name="collections_font_size_2">5dp</dimen>
+    <dimen name="collections_font_size_1">10dp</dimen>
+    <dimen name="collections_font_size0">15dp</dimen>
+    <dimen name="collections_font_size1">20dp</dimen>
+    <dimen name="collections_font_size2">25dp</dimen>
+    <dimen name="collections_font_size3">30dp</dimen>
+    <dimen name="collections_font_size4">35dp</dimen>
+    <dimen name="collections_font_size5">40dp</dimen>
+    <dimen name="collections_font_size6">45dp</dimen>
+    <dimen name="collections_font_size7">50dp</dimen>
+    
+    <dimen name="collections_padding1">5dp</dimen>
+    <dimen name="collections_padding2">10dp</dimen>
+    <dimen name="collections_padding3">15dp</dimen>
+    <dimen name="collections_padding4">20dp</dimen>
+</resources>
