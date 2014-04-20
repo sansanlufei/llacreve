@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -74,7 +75,7 @@ public class CallLogListAdapter extends MyContactsListAdapter {
 		});
 		
 		//call button and isms button
-		ImageView callButton = (ImageView) onePersonView.findViewById(R.id.contact_to_call);
+		Button callButton = (Button) onePersonView.findViewById(R.id.contact_to_call);
 		callButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -84,7 +85,7 @@ public class CallLogListAdapter extends MyContactsListAdapter {
 				}
 			}
 		});
-		ImageView ismsButton = (ImageView) onePersonView.findViewById(R.id.contact_to_isms_chat);
+		Button ismsButton = (Button) onePersonView.findViewById(R.id.contact_to_isms_chat);
 		ismsButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {

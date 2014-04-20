@@ -104,35 +104,33 @@
         >
         <TextView
 	        android:layout_width="1dp"
-	        android:layout_height="40dp"
-	        android:background="@android:color/darker_gray"
+	        android:layout_height="30dp"
+	        android:background="@android:color/background_light"
 	        android:layout_marginTop="7dp"
 	        android:layout_marginLeft="10dp"
 	        android:layout_marginRight="5dp"
 	        />
-	    <ImageView 
-	        android:layout_width="@dimen/contacts_list_item_height_small_40"
-	        android:layout_height="@dimen/contacts_list_item_height_small_40"
-	        android:src="@drawable/social_chat_dark"
+	    <Button 
+	        android:layout_width="@dimen/contacts_list_item_height_small_30"
+	        android:layout_height="@dimen/contacts_list_item_height_small_30"
 	        android:clickable="true"
 	        android:layout_gravity="center_vertical"
-	        android:background="@drawable/contact_item_background"
+	        android:background="@drawable/button_chat"
 	        android:id="@+id/contact_to_isms_chat" />
 	    <TextView
 	        android:layout_width="1dp"
-	        android:layout_height="40dp"
-	        android:background="@android:color/darker_gray"
+	        android:layout_height="30dp"
+	        android:background="@android:color/background_light"
 	        android:layout_marginTop="7dp"
 	        android:layout_marginLeft="10dp"
 	        android:layout_marginRight="5dp"
 	        />
-		<ImageView 
-	        android:layout_width="@dimen/contacts_list_item_height_small_40"
-	        android:layout_height="@dimen/contacts_list_item_height_small_40"
-	        android:src="@drawable/device_access_call_dark"
+		<Button 
+	        android:layout_width="@dimen/contacts_list_item_height_small_30"
+	        android:layout_height="@dimen/contacts_list_item_height_small_30"
 	        android:clickable="true"
 	        android:layout_gravity="center_vertical"
-	        android:background="@drawable/contact_item_background"
+	        android:background="@drawable/button_call"
 	        android:id="@+id/contact_to_call" />
     </LinearLayout>
 </RelativeLayout>

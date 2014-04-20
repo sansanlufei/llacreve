@@ -3,7 +3,6 @@ package com.huobansoft.evercall.activity;
 import java.util.ArrayList;
 
 import net.youmi.android.AdManager;
-
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
@@ -16,7 +15,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 
 import com.huobansoft.evercall.R;
 
@@ -35,12 +34,13 @@ public class MainActivity extends FragmentActivity {
 
 	private ViewPager pagers;
 	private TabsAdapter tabsAdapter;
-	private ImageButton searchButton;
-	private ImageButton toDialButton;
-	private ImageButton toSmsButton;
-	private ImageButton toContactAddButton;
-	private ImageButton toCollectionsButton;
+	private Button searchButton;
+	private Button toDialButton;
+	private Button toSmsButton;
+	private Button toContactAddButton;
+	private Button ohtersButton;
 	private View bottomPad;
+	private View bottomPadOthers;
 	private ActionBar actionBar;
 	
 	@Override
@@ -82,30 +82,34 @@ public class MainActivity extends FragmentActivity {
 	private void initBottomPad() {
 		//chenge to center contacts list when search button is clicked
         bottomPad = this.findViewById(R.id.bottom_pad);
-        searchButton = (ImageButton) this.findViewById(R.id.search_button);
+        bottomPadOthers = this.findViewById(R.id.bottom_pad_others);
+        searchButton = (Button) this.findViewById(R.id.search_button);
         searchButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				actionBar.setSelectedNavigationItem(1);
+				bottomPadOthers.setVisibility(View.GONE);
 			}
 		});
-        toDialButton = (ImageButton) this.findViewById(R.id.to_dial_pad);
+        toDialButton = (Button) this.findViewById(R.id.to_dial_pad);
         toDialButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"));
 				startActivity(intent);
+				bottomPadOthers.setVisibility(View.GONE);
 			}
 		});
-        toSmsButton = (ImageButton) this.findViewById(R.id.to_sms);
+        toSmsButton = (Button) this.findViewById(R.id.to_sms);
         toSmsButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"));
 				startActivity(intent);
+				bottomPadOthers.setVisibility(View.GONE);
 			}
 		});
-        toContactAddButton = (ImageButton) this.findViewById(R.id.to_contact_add);
+        toContactAddButton = (Button) this.findViewById(R.id.to_contact_add);
         toContactAddButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -114,13 +118,18 @@ public class MainActivity extends FragmentActivity {
 				intent.setType("vnd.android.cursor.dir/contact");
 				intent.setType("vnd.android.cursor.dir/raw_contact");
 				startActivity(intent);
+				bottomPadOthers.setVisibility(View.GONE);
 			}
 		});
-        toCollectionsButton = (ImageButton) this.findViewById(R.id.collections_button);
-        toCollectionsButton.setOnClickListener(new View.OnClickListener() {
+        ohtersButton = (Button) this.findViewById(R.id.others_button);
+        ohtersButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				actionBar.setSelectedNavigationItem(2);
+				if (View.VISIBLE == bottomPadOthers.getVisibility()) {
+					bottomPadOthers.setVisibility(View.GONE);
+				} else {
+					bottomPadOthers.setVisibility(View.VISIBLE);
+				}
 			}
 		});
 	}
@@ -181,6 +190,7 @@ public class MainActivity extends FragmentActivity {
 			mActionBar.setSelectedNavigationItem(arg0);
 			if (arg0 == 1) {
 				bottomPad.setVisibility(View.GONE);
+				bottomPadOthers.setVisibility(View.GONE);
 			} else {
 				bottomPad.setVisibility(View.VISIBLE);
 			}
