@@ -49,8 +49,17 @@ public class ContactsListAdapter extends MyContactsListAdapter {
 		//date
 		TextView dateView = (TextView) onePersonView.findViewById(R.id.contact_time);
 		SimpleDateFormat f = new SimpleDateFormat("MM-dd HH:mm");
-		dateView.setText(f.format(new Date(Long.parseLong(dateView.getText().toString()))));
+		
+		
 		final String date = dateView.getText().toString();
+		long dateLong = 0;
+		//fengyi.hua add number format check
+		try{
+			dateLong = Long.parseLong(date);
+		} catch(NumberFormatException e){
+			dateLong = 0;
+		}
+		dateView.setText(f.format(new Date(dateLong)));
 		
 		//connected times
 		TextView connectedTimesView = (TextView) onePersonView.findViewById(R.id.contact_times_connected);
