@@ -15,10 +15,10 @@
     <dimen name="search_pad_button_width">37dp</dimen>
     
     <dimen name="collections_item_button_size">40dp</dimen>
-    <dimen name="collections_item_height1">50dp</dimen>
-    <dimen name="collections_item_height2">100dp</dimen>
-    <dimen name="collections_item_height3">150dp</dimen>
-    <dimen name="collections_item_height4">200dp</dimen>
+    <dimen name="collections_item_height1">60dp</dimen>
+    <dimen name="collections_item_height2">80dp</dimen>
+    <dimen name="collections_item_height3">100dp</dimen>
+    <dimen name="collections_item_height4">120dp</dimen>
     
     <dimen name="collections_font_size_2">5dp</dimen>
     <dimen name="collections_font_size_1">10dp</dimen>

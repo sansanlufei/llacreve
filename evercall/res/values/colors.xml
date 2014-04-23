@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <color name="bottom_pad_background">#F0F0F0</color>
+    <color name="bottom_pad_background">#d9d8d8</color>
     <color name="main_background">#00A67C</color>
     <color name="main_background_clicked">#35D2AB</color>
     
@@ -24,5 +24,10 @@
     <color name="collections_orange_3">#FF5F00</color>
     <color name="collections_orange_4">#BF6530</color>
     <color name="collections_orange_5">#A63E00</color>
+    <color name="collections_gray1">#d9d8d8</color>
+    <color name="collections_gray2">#c7c6c6</color>
+    <color name="collections_gray3">#b2b1b1</color>
+    <color name="collections_gray4">#9d9c9c</color>
+    <color name="collections_gray5">#888787</color>
     
 </resources>

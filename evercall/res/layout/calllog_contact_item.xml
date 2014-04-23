@@ -11,15 +11,26 @@
         android:visibility="gone"
         android:id="@+id/contact_id" />"
     
-    <ImageView 
-        android:layout_width="@dimen/contacts_list_item_height"
-        android:layout_height="match_parent"
-        android:src="@drawable/default_photo"
-        android:clickable="true"
-        android:id="@+id/contact_photo"/>
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/contact_photo_panel"
+        >
+     	<ImageView 
+	        android:layout_width="@dimen/contacts_list_item_height"
+	        android:layout_height="@dimen/contacts_list_item_height"
+	        android:src="@drawable/default_photo"
+	        android:clickable="true"
+	        android:id="@+id/contact_photo"/>
+     	<ImageView 
+	        android:layout_width="@dimen/contacts_list_item_height"
+	        android:layout_height="@dimen/contacts_list_item_height"
+	        android:src="@drawable/photo_bg_oval"/>
+    </RelativeLayout>
+    
     
     <LinearLayout 
-        android:layout_toRightOf="@id/contact_photo"
+        android:layout_toRightOf="@id/contact_photo_panel"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:padding="5dp"

@@ -2,55 +2,53 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/collections_padding1"
     android:background="@android:color/background_light">
     
-    <RelativeLayout
+    <LinearLayout 
         android:layout_width="match_parent"
         android:layout_height="@dimen/collections_item_height1"
-        android:background="@color/collections_orange_3"
         android:layout_alignParentTop="true"
-        android:paddingLeft="@dimen/collections_padding2"
-        android:paddingRight="@dimen/collections_padding1"
-        android:gravity="center_vertical"
-        android:id="@+id/account_panel">
-        
+        android:orientation="horizontal"
+        android:background="@drawable/panel_frame_bg"
+        android:padding="@dimen/collections_padding2"
+        android:id="@+id/account_panel"
+        >
         <TextView 
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
             android:gravity="center_vertical"
-            android:textColor="@android:color/background_light"
             android:textSize="@dimen/collections_font_size0"
-            android:text="手机号:"
-            android:id="@+id/account_tel_name"/>
+            android:text="账户"/>
         
-        <TextView 
-            android:layout_width="wrap_content"
+        <LinearLayout 
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_toRightOf="@id/account_tel_name"
+            android:layout_weight="2"
             android:gravity="center_vertical"
-            android:textColor="@android:color/background_light"
-            android:textSize="@dimen/collections_font_size1"
-            android:text="18600463306"
-            android:id="@+id/account_tel"/>
+            >
+           
+        </LinearLayout>
         
-        <ImageButton 
+        <Button 
             android:layout_width="@dimen/collections_item_button_size"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:gravity="center_vertical"
-            android:background="@color/collections_orange_3"
-            android:src="@drawable/navigation_right"
+            android:background="@drawable/button_navigation_right"
             android:id="@+id/account_tel_bind_btn" />
         
-    </RelativeLayout>
+    </LinearLayout>
     
     <LinearLayout 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@id/account_panel"
+        android:background="@drawable/panel_frame_bg"
         android:padding="@dimen/collections_padding2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/account_panel"
         android:id="@+id/account_credits_panel">
         
         <LinearLayout 
@@ -141,13 +139,12 @@
 		            android:text="350000"
 		            android:id="@+id/account_credits"/>
 		        
-		        <ImageButton 
+		        <Button 
 		            android:layout_width="@dimen/collections_item_button_size"
-		            android:layout_height="match_parent"
+		            android:layout_height="@dimen/collections_item_button_size"
 		            android:layout_alignParentRight="true"
 		            android:gravity="center_vertical"
-		            android:background="@android:color/background_light"
-		            android:src="@drawable/navigation_right_blue"
+		            android:background="@drawable/button_navigation_right"
 		            android:id="@+id/account_credits_logs_btn" />
             </RelativeLayout>
 		        
@@ -158,6 +155,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/account_credits_panel"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/panel_frame_bg"
+        android:padding="@dimen/collections_padding2"
         android:orientation="vertical"
         android:id="@+id/account_functions_panel">
         
