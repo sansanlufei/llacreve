@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -25,10 +24,11 @@ import android.widget.TextView;
 
 import com.huobansoft.evercall.R;
 import com.huobansoft.evercall.util.ContactsHelper;
+import com.huobansoft.evercall.vo.Person;
 
 public class ContactsFragment extends Fragment {
 
-	private static final String TAG = ContactsFragment.class.getSimpleName();
+	private static final String TAG = "evercall";
 	
 	private ContactsHelper contactsHelper;
 	private FrameLayout mView;

@@ -1,4 +1,4 @@
-package com.huobansoft.evercall.activity;
+package com.huobansoft.evercall.vo;
 
 import java.util.HashMap;
 

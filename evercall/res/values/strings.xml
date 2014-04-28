@@ -7,5 +7,12 @@
     <string name="title_activity_main">MainActivity</string>
     
     <string name="search_hint">输入名字</string>
+    <string name="account_phonenumber">输入您的手机号码</string>
+    <string name="account_bind_hint">绑定您的手机号码，用于积分充值。</string>
+    <string name="button_ok">确定</string>
+    <string name="button_cancel">取消</string>
+    <string name="hint_when_account_empty">请先绑定手机号!</string>
+    <string name="hint_when_account_not_changed">没有最新收益!</string>
+    <string name="evercall_alert">EverCall 提示</string>
 
 </resources>

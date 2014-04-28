@@ -1,37 +1,41 @@
-package com.huobansoft.evercall.dao;
+package com.huobansoft.evercall.vo;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.huobansoft.evercall.dao.ConsumptionLog;
+
 public class Account {
 	
-	private String phoneNumber;
+	private static final String TAG = "evercall";
+	
+	private String tel = "";
+	private String credits = "0";
 	private String earningsToday = "0";
 	private String earningsYestoday = "0";
-	private String credits = "0";
-	private Map<String, String> earningsLog;
+	private Map<String, String> creditsLog;
 	private List<ConsumptionLog> consumptionsLog;
 	
-	public Account(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-		earningsLog = new LinkedHashMap<String, String>();
-		consumptionsLog = new ArrayList<ConsumptionLog>();
+	@Override
+	public boolean equals(Object o) {
+		if (! (o instanceof Account)) {
+			return false;
+		}
+		Account account = (Account) o;
+		return this.tel != null && account != null && this.tel.equals(account.getTel()); 
 	}
 	
-	public Account syncToServer() {
-		
-		return this;
-	}
-	
-
-	public String getPhoneNumber() {
-		return phoneNumber;
+	public void copy(Account account) {
+		this.tel = account.getTel();
+		this.credits = account.getCredits();
 	}
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
 
 	public String getEarningsToday() {
@@ -58,12 +62,12 @@ public class Account {
 		this.credits = credits;
 	}
 
-	public Map<String, String> getEarningsLog() {
-		return earningsLog;
+	public Map<String, String> getCreditsLog() {
+		return creditsLog;
 	}
 
-	public void setEarningsLog(Map<String, String> earningsLog) {
-		this.earningsLog = earningsLog;
+	public void setCreditsLog(Map<String, String> creditsLog) {
+		this.creditsLog = creditsLog;
 	}
 
 	public List<ConsumptionLog> getConsumptionsLog() {

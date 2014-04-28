@@ -11,9 +11,9 @@ import android.provider.CallLog;
 import android.provider.ContactsContract;
 
 import com.huobansoft.evercall.R;
-import com.huobansoft.evercall.activity.Person;
 import com.huobansoft.evercall.dao.CallLogListAdapter;
 import com.huobansoft.evercall.dao.ContactsListAdapter;
+import com.huobansoft.evercall.vo.Person;
 
 public class ContactsHelper {
 	

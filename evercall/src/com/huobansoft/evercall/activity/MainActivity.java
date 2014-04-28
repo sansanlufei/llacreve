@@ -77,6 +77,7 @@ public class MainActivity extends FragmentActivity {
         }
         
         initBottomPad();
+        
 	}
 	
 	private void initBottomPad() {

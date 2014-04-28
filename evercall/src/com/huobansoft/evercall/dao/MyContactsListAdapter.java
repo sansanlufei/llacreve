@@ -14,8 +14,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.huobansoft.evercall.R;
-import com.huobansoft.evercall.activity.Person;
 import com.huobansoft.evercall.util.ContactsHelper;
+import com.huobansoft.evercall.vo.Person;
 
 public class MyContactsListAdapter extends SimpleCursorAdapter {
 

@@ -15,8 +15,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.huobansoft.evercall.R;
-import com.huobansoft.evercall.activity.Person;
 import com.huobansoft.evercall.util.ContactsHelper;
+import com.huobansoft.evercall.vo.Person;
 
 public class ContactsListAdapter extends MyContactsListAdapter {
 

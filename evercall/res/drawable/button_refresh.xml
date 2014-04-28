@@ -4,6 +4,6 @@
     <item android:state_enabled="true" android:state_selected="true" android:drawable="@drawable/action_refresh_orange3" />  
     <item android:state_enabled="true" android:state_focused="true" android:drawable="@drawable/action_refresh_orange3" />  
     <item android:state_enabled="true" android:state_pressed="true" android:drawable="@drawable/action_refresh_orange3" />  
-    <item android:drawable="@drawable/action_refresh_green" />  
+    <item android:drawable="@drawable/action_refresh_gray3" />  
 
 </selector>

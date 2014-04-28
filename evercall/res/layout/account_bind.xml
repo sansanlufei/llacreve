@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/collections_padding2">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        >
+         <ImageView
+	        android:src="@drawable/logo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="32dp"
+	        android:scaleType="fitStart"
+	        android:layout_gravity="center_vertical"
+	        android:contentDescription="@string/app_name" />
+         <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/collections_padding1"
+            android:textColor="@color/collections_orange_2"
+            android:textSize="@dimen/collections_font_size0"
+            android:text="@string/account_bind_hint"
+            android:layout_gravity="center_vertical"/>
+         
+    </LinearLayout>
+    
+    <EditText
+        android:id="@+id/account_phonenumber"
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:hint="@string/account_phonenumber" />
+</LinearLayout>
